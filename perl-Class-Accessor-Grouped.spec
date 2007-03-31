@@ -16,6 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/C/CL/CLACO/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5e40321f39954b9a4d7f3c8ae6f53d9f
 URL:		http://search.cpan.org/dist/Class-Accessor-Grouped/
+BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
