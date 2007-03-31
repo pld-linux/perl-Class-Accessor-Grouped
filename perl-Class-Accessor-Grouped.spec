@@ -6,14 +6,14 @@
 %define	pdir	Class
 %define	pnam	Accessor-Grouped
 Summary:	Class::Accessor::Grouped - Lets you build groups of accessors
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Class::Accessor::Grouped - tworzenie grup funkcji dostępowych
 Name:		perl-Class-Accessor-Grouped
 Version:	0.03
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/C/CL/CLACO/Class-Accessor-Grouped-0.03.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/C/CL/CLACO/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5e40321f39954b9a4d7f3c8ae6f53d9f
 URL:		http://search.cpan.org/dist/Class-Accessor-Grouped/
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -25,8 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This class lets you build groups of accessors that will call different
 getters and setters.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Ta klasa pozwala tworzyć grupy funkcji dostępowych wywołujących różne
+funkcje odczytujące i ustawiające.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
