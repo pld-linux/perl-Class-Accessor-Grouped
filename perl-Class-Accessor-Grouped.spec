@@ -8,15 +8,16 @@
 Summary:	Class::Accessor::Grouped - Lets you build groups of accessors
 Summary(pl.UTF-8):	Class::Accessor::Grouped - tworzenie grup funkcji dostępowych
 Name:		perl-Class-Accessor-Grouped
-Version:	0.03
+Version:	0.07000
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/C/CL/CLACO/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5e40321f39954b9a4d7f3c8ae6f53d9f
+# Source0-md5:	e38f47b4732df2e3af1cdcea035f9b2b
 URL:		http://search.cpan.org/dist/Class-Accessor-Grouped/
-BuildRequires:	perl-Module-Build
+BuildRequires:	perl-Class-Inspector
+BuildRequires:	perl-MRO-Compat
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -34,17 +35,17 @@ funkcje odczytujące i ustawiające.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} -MExtUtils::MakeMaker -e 'WriteMakefile(NAME=>"Class::Accessor::Grouped")' \
+	INSTALLDIRS=vendor
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
