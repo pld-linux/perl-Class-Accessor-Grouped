@@ -8,12 +8,12 @@
 Summary:	Class::Accessor::Grouped - Lets you build groups of accessors
 Summary(pl.UTF-8):	Class::Accessor::Grouped - tworzenie grup funkcji dostępowych
 Name:		perl-Class-Accessor-Grouped
-Version:	0.09000
+Version:	0.09001
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/R/RK/RKITOVER/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3e45eaf661a67dfc86becec239712355
+# Source0-md5:	9caf395a9c5bef6500b4e754446b29dd
 URL:		http://search.cpan.org/dist/Class-Accessor-Grouped/
 BuildRequires:	perl-Class-Inspector
 BuildRequires:	perl-MRO-Compat
